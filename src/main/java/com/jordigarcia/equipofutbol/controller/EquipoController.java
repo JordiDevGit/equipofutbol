@@ -9,15 +9,15 @@ import java.util.List;
 
 @CrossOrigin // Para hacer peticiones desde otro servidor
 @RestController // Para hacer peticiones REST
-@RequestMapping("/people")
+@RequestMapping("/equipos")
 public class EquipoController {
 
     @Autowired
     private EquipoRepository equipoRepository;
 
     @PostMapping("/")
-    public void createEquipo(@RequestBody Equipo person) {
-        equipoRepository.save(person);
+    public void createEquipo(@RequestBody Equipo equipo) {
+        equipoRepository.save(equipo);
     }
 
     @DeleteMapping("/{id}")

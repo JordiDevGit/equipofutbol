@@ -1,5 +1,4 @@
 package com.jordigarcia.equipofutbol.entities;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -14,7 +13,8 @@ public class Estadio {
 	private int construccion;
 	private int aforo;
 	private String fotoEstadio;
-	
+	private String direccion;
+
 	public int getEquipoCod() {
 		return equipoCod;
 	}
@@ -51,6 +51,12 @@ public class Estadio {
 	public void setFotoEstadio(String fotoEstadio) {
 		this.fotoEstadio = fotoEstadio;
 	}
-	
-	
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 }

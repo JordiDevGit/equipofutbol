@@ -9,7 +9,7 @@ import java.util.List;
 
 @CrossOrigin // Para hacer peticiones desde otro servidor
 @RestController // Para hacer peticiones REST
-@RequestMapping("/people")
+@RequestMapping("/jugadores")
 public class JugadorController {
 
     @Autowired
