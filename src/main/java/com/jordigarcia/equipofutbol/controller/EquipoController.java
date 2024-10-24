@@ -1,6 +1,7 @@
 package com.jordigarcia.equipofutbol.controller;
 
 import com.jordigarcia.equipofutbol.entities.Equipo;
+import com.jordigarcia.equipofutbol.entities.Jugador;
 import com.jordigarcia.equipofutbol.persistence.repository.EquipoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,11 @@ public class EquipoController {
     public List<Equipo> selectEquipo() {
         List<Equipo> equipos = equipoRepository.findAll();
         return equipos;
+    }
+
+    @GetMapping("/{id}")
+    public Equipo selectEquipo(@PathVariable("id") Integer id) {
+        return equipoRepository.findEquipoByEquipoCod(id);
     }
 
     @PutMapping("/{id}")

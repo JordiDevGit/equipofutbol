@@ -27,10 +27,9 @@ public class JugadorController {
         jugadorRepository.delete(i);
     }
 
-    @GetMapping
-    public List<Jugador> selectJugador() {
-        List<Jugador> jugadores = jugadorRepository.findAll();
-        return jugadores;
+    @GetMapping("/{id}")
+    public List<Jugador> selectJugador(@PathVariable("id") Integer id) {
+        return jugadorRepository.findPlayerByEquipoCod(id);
     }
 
     @PutMapping("/{id}")
